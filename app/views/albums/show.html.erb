@@ -11,8 +11,6 @@
                   } %>
 <%=link_to "Home",albums_path%>
 
-<%= form_with model: @album, local: true, html: { ipart: true } do |form| %>
-  <%= form.label :image %>
-  <%= form.file_field :image %>
-  <%= form.submit %>
-<% end %>
+<div>
+  <%=link_to "New photo",new_photo_path%>
+</div>

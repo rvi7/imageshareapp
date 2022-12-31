@@ -1,0 +1,30 @@
+
+
+<%= form_with model:@photo do |form| %>
+  <div>
+    <%= form.label :Tag_Line %><br>
+    <%= form.text_field :tagline%>
+      <% photo.errors.full_messages_for(:tagline).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  </div>
+
+  <div>
+    <%= form.label :Create_Date %><br>
+    <%= form.text_area :created_on %>
+      <% photo.errors.full_messages_for(:created_on).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  </div>
+
+   <%= form.label :album %>
+  <%= form.collection_select :album_id, Album.all, :id, :name %>
+ 
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
