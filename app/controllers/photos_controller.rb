@@ -41,7 +41,7 @@ class PhotosController < ApplicationController
 
   private
     def photo_params
-      params.require(:photo).permit(:tagline,:created_on,:album_id)
+      params.require(:photo).permit(:tagline,:created_on,:album_id,:image)
     end
 
 end

@@ -1,6 +1,6 @@
 
 
-<%= form_with model:@photo do |form| %>
+<%= form_with model:@photo, local: true, html: { ipart: true } do |form| %>
   <div>
     <%= form.label :Tag_Line %><br>
     <%= form.text_field :tagline%>
@@ -21,6 +21,11 @@
 
    <%= form.label :album %>
   <%= form.collection_select :album_id, Album.all, :id, :name %>
+
+  <div>
+      <%= form.label :image %>
+  <%= form.file_field :image %>
+  </div>
  
 
   <div>

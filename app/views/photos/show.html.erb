@@ -3,3 +3,5 @@
 
 <p>Photo Created On-<%= @photo.created_on %></p>
 <p>Photo Belongs To-<%=@photo.album_id%></p>
+<%= image_tag @photo.image.url %>
+
